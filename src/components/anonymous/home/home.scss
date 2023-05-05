@@ -213,7 +213,7 @@
       .home-body-right {
         @media (max-width: 768px) {
           width: 85%;
-          @include m.flexbox(row, stretch, stretch, 1rem);
+          @include m.flexbox(row, center, center, 1rem);
         }
 
         button {
@@ -221,6 +221,7 @@
           margin-bottom: 0.5rem;
           color: v.$color3;
           line-height: 28px;
+          white-space: nowrap;
 
           @media (max-width: 768px) {
             margin-bottom: 0;
