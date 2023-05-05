@@ -395,6 +395,7 @@ const Home = () => {
           </Card>
         ))}
       </Container>
+      <Spacer height={20} />
     </>
   );
 };
