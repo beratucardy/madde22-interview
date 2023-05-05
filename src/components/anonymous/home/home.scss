@@ -30,15 +30,18 @@
       transform: translate(-50%, -50%);
 
       @media (min-width: 1200px) and (max-width: 1400px) {
-        left: 42%;
+        left: 35%;
+        top: 20%;
       }
 
       @media (min-width: 992px) and (max-width: 1200px) {
-        left: 48%;
+        left: 35%;
+        top: 20%;
       }
 
       @media (min-width: 768px) and (max-width: 992px) {
-        left: 50.5%;
+        left: 30%;
+        top: 20%;
         white-space: nowrap;
       }
 
