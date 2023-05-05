@@ -1,0 +1,377 @@
+@use "../../../assets/scss/variables" as v;
+@use "../../../assets/scss/mixins" as m;
+
+.home {
+  .home-left {
+    position: relative;
+
+    @media (max-width: 768px) {
+      height: 10rem;
+    }
+
+    span.category {
+      position: absolute;
+      top: 25%;
+      left: 37%;
+      padding: 0 20px;
+      background-color: v.$color5;
+      color: v.$color3;
+      font-family: v.$font-bold;
+      font-size: 14px;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        left: 42%;
+      }
+
+      @media (min-width: 992px) and (max-width: 1200px) {
+        left: 48%;
+      }
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        left: 50.5%;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        top: 18%;
+        left: 15%;
+        white-space: nowrap;
+      }
+    }
+
+    div.home-left-first {
+      background-color: v.$color1;
+      height: 100%;
+      width: 50%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      p {
+        color: v.$color2;
+        width: 20%;
+        @include m.flexbox(row, center, center);
+        height: 100%;
+        text-align: center;
+        margin-left: 2rem;
+        line-height: 24px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          @include m.flexbox(row, center, flex-start);
+          color: v.$color3;
+          margin-left: 0;
+          padding-top: 1rem;
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+          margin-left: 0.7rem;
+        }
+      }
+
+      div {
+        @include m.flexbox(row, center, center);
+        padding-top: 0.7rem;
+
+        @media (max-width: 350px) {
+          padding-left: 1.1rem;
+        }
+
+        span {
+          padding-right: 0.3rem;
+          color: v.$color3;
+
+          &:first-child {
+            font-family: v.$font-bold;
+            font-size: 1.5rem;
+          }
+
+          &:nth-child(2) {
+            font-family: v.$font-bold;
+          }
+
+          &:last-child {
+            color: v.$color4;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      height: 110px;
+      width: 260px;
+      left: 65%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        width: 200px;
+      }
+
+      @media (min-width: 992px) and (max-width: 1200px) {
+        width: 180px;
+        left: 70%;
+        height: 130px;
+      }
+
+      @media (min-width: 768px) and (max-width: 992px) {
+        width: 150px;
+        left: 70%;
+        height: 150px;
+      }
+
+      @media (max-width: 768px) {
+        width: 90%;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .home-right {
+    a {
+      text-decoration: none;
+      font-family: v.$font-bold;
+      line-height: 26px;
+      font-size: 18px;
+    }
+
+    a:hover {
+      color: v.$color5;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .desc {
+      line-height: 26px;
+
+      .read-or-hide {
+        font-family: v.$font-bold;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .location {
+      @include m.flexbox(row, flex-start, center);
+      color: v.$color4;
+      padding-left: 0.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .add-calendar {
+      cursor: pointer;
+      white-space: nowrap;
+      @include m.flexbox(row, center, center);
+
+      &:hover {
+        color: v.$color2;
+      }
+
+      @media (min-width: 768px) and (max-width: 1200px) {
+        display: block;
+      }
+    }
+
+    .home-body {
+      @media (min-width: 768px) {
+        @include m.flexbox(row, center, center);
+      }
+
+      @media (max-width: 768px) {
+        @include m.flexbox(column, center, center, 1rem);
+      }
+
+      .home-body-left {
+        width: 85%;
+      }
+
+      .home-body-right {
+        @media (max-width: 768px) {
+          width: 85%;
+          @include m.flexbox(row, stretch, stretch, 1rem);
+        }
+
+        button {
+          width: 100%;
+          margin-bottom: 0.5rem;
+          color: v.$color3;
+          line-height: 28px;
+
+          @media (max-width: 768px) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  .logo {
+    @include m.flexbox(row, center);
+  }
+
+  h1 {
+    font-family: v.$font-bold;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  nav.navbar {
+    padding-left: 15rem;
+    padding-bottom: 0;
+
+    .container-fluid {
+      padding: 0;
+
+      .navbar-toggler {
+        margin-right: 64px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding-left: 0 !important;
+      padding-bottom: 1rem;
+    }
+
+    img {
+      margin-left: 64px;
+    }
+
+    a.nav-link {
+      padding: 2rem 1rem 2rem 1rem !important;
+      white-space: nowrap;
+      line-height: 26px;
+      color: v.$color1;
+
+      &:hover {
+        color: v.$color2;
+      }
+
+      @media (max-width: 1200px) {
+        padding: 0 !important;
+        margin-right: 50px;
+      }
+    }
+
+    a.nav-link.active {
+      border-bottom: 4px solid v.$color2;
+      font-family: v.$font-bold;
+
+      @media (max-width: 1200px) {
+        border-bottom: none;
+      }
+    }
+
+    input {
+      margin-right: 5rem !important;
+      padding: 0.8rem 2rem;
+      font-size: 14px;
+      line-height: 24px;
+
+      @media (max-width: 1200px) {
+        margin-right: 20px !important;
+        width: 170px;
+      }
+    }
+
+    .search-form {
+      position: relative;
+
+      @media (max-width: 1200px) {
+        justify-content: flex-end;
+        margin: 0;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+
+        @media (max-width: 1200px) {
+          right: 10rem;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  .filter {
+    @include m.flexbox(row, space-between);
+    padding: 1rem 0 1rem 4rem;
+    background-color: v.$color4;
+
+    .filter-left {
+      button.btn-filter {
+        background-color: v.$color4;
+        border: none;
+        color: v.$color1;
+        @include m.flexbox(row, center, center);
+        padding: 0;
+        box-shadow: none;
+        line-height: 26px;
+      }
+
+      .btn-filter:focus {
+        color: v.$color2;
+      }
+
+      .btn-filter:hover {
+        color: v.$color2;
+      }
+    }
+
+    .filter-right {
+      a {
+        padding-top: 0.1rem;
+        text-decoration: none;
+        margin-right: 64px;
+        line-height: 24px;
+        @include m.flexbox(row, center, center, 0.5rem);
+      }
+
+      a:hover {
+        color: v.$color2;
+      }
+
+      svg {
+        font-size: 1.5rem;
+      }
+    }
+
+    svg {
+      @media (max-width: 350px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.popover-body {
+  margin-left: 4rem !important;
+  margin-top: 1rem;
+  background-color: whitesmoke;
+  padding: 1.5rem 1.2rem !important;
+
+  p {
+    font-family: v.$font-bold;
+  }
+}
+
+.add-calendar-active {
+  white-space: nowrap;
+  border-radius: 2px;
+  color: v.$color2;
+}

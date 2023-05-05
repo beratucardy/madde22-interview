@@ -1,0 +1,24 @@
+@import "./variables";
+
+// FONTS
+@font-face {
+  font-family: "Galano-Regular";
+  src: url("../fonts/GalanoGrotesqueRegular.otf");
+}
+@font-face {
+  font-family: "Galano-Medium";
+  src: url("../fonts/GalanoGrotesqueMedium.otf");
+}
+@font-face {
+  font-family: "Galano-ExtraBold";
+  src: url("../fonts/GalanoGrotesqueExtraBold.otf");
+}
+@font-face {
+  font-family: "Galano-Bold";
+  src: url("../fonts/GalanoGrotesqueBold.otf");
+}
+
+/* LIBRARIES */
+@import "bootstrap/scss/bootstrap.scss";
+@import "sweetalert2/src/variables";
+@import "sweetalert2/src/sweetalert2";
