@@ -2,6 +2,15 @@
 @use "../../../assets/scss/mixins" as m;
 
 .home {
+  .card.activities {
+    height: 204px;
+    display: block;
+
+    @media (max-width: 768px) {
+      height: 550px;
+    }
+  }
+
   .home-left {
     position: relative;
 
@@ -12,7 +21,7 @@
     span.category {
       position: absolute;
       top: 25%;
-      left: 37%;
+      left: 35%;
       padding: 0 20px;
       background-color: v.$color5;
       color: v.$color3;
@@ -34,7 +43,7 @@
       }
 
       @media (max-width: 768px) {
-        top: 18%;
+        top: 15%;
         left: 15%;
         white-space: nowrap;
       }
@@ -55,7 +64,7 @@
         @include m.flexbox(row, center, center);
         height: 100%;
         text-align: center;
-        margin-left: 2rem;
+        margin-left: 1.5rem;
         line-height: 24px;
 
         @media (max-width: 768px) {
@@ -73,7 +82,7 @@
 
       div {
         @include m.flexbox(row, center, center);
-        padding-top: 0.7rem;
+        padding-top: 0.42rem;
 
         @media (max-width: 350px) {
           padding-left: 1.1rem;
@@ -102,8 +111,8 @@
 
     img {
       position: absolute;
-      height: 110px;
-      width: 260px;
+      height: 170px;
+      width: 280px;
       left: 65%;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -115,19 +124,19 @@
       @media (min-width: 992px) and (max-width: 1200px) {
         width: 180px;
         left: 70%;
-        height: 130px;
+        height: 170px;
       }
 
       @media (min-width: 768px) and (max-width: 992px) {
         width: 150px;
         left: 70%;
-        height: 150px;
+        height: 170px;
       }
 
       @media (max-width: 768px) {
         width: 90%;
         left: 50%;
-        top: 70%;
+        top: 77%;
         transform: translate(-50%, -50%);
       }
     }
@@ -183,12 +192,15 @@
     }
 
     .home-body {
+      height: 100%;
+
       @media (min-width: 768px) {
         @include m.flexbox(row, center, center);
       }
 
       @media (max-width: 768px) {
-        @include m.flexbox(column, center, center, 1rem);
+        margin-top: 2rem;
+        @include m.flexbox(column, flex-start, center, 1rem);
       }
 
       .home-body-left {

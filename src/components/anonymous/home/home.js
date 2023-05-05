@@ -324,8 +324,8 @@ const Home = () => {
           </Alert>
         )}
         {activities.map((activity) => (
-          <Card className="my-3" key={activity.id}>
-            <Row>
+          <Card className="my-3 activities" key={activity.id}>
+            <Row style={{ height: "100%" }}>
               <Col md={3} className="home-left">
                 <div className="home-left-first">
                   <p className="d-md-flex d-none">{activity.date2}</p>
